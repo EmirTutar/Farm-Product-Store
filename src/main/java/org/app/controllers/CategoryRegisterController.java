@@ -48,11 +48,11 @@ public class CategoryRegisterController implements Initializable {
                 categoryTextField.setText("");
                 subCategoryTextField.setText("");
                 subCategories.clear();
-                Alerts.success("Kategori opprettet!");
+                Alerts.success("Category created!");
                 avbryt();
-            }else{
-                Alerts.warning("En kategori med navnet " + categoryName + " finnes allerede.\n" +
-                        "Du kan skrivet navnet på kategorien og legge til nye under-kategorier til den.");
+            } else {
+                Alerts.warning("A category with the name " + categoryName + " already exists.\n" +
+                        "You can type the name of the category and add new sub-categories to it.");
             }
         } catch (EmptyFieldException | InvalidTextInputException e) {
             Alerts.warning(e.getMessage());
@@ -65,8 +65,8 @@ public class CategoryRegisterController implements Initializable {
             String category = Validator.validateCategory(categoryTextField.getText());
             String subCategoryName = Validator.validateCategory(subCategoryTextField.getText());
 
-            for(Category c: CategoryCollection.CATEGORIES){
-                if(c.getName().equals(category)){
+            for (Category c: CategoryCollection.CATEGORIES) {
+                if (c.getName().equals(category)) {
                     c.addSubCategory(subCategoryName);
                     subCategories.add(subCategoryName);
                     CATEGORY_COLLECTION.setModified(true);

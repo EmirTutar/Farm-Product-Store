@@ -15,23 +15,23 @@ public class LoginController {
     @FXML TextField txtUsername, txtPassword;
     private final User admin = new User("Admin","1234");
 
-
     @FXML
     void loggInn(ActionEvent event) {
         Stage stage = (Stage) loginPane.getScene().getWindow();
-        if(isValidUser()){
-            Load.window("adminView.fxml","Admin",stage);
-        } else{
-            Alerts.warning("Feil brukernavn eller passord!\n" +
+        if (isValidUser()) {
+            Load.window("adminView.fxml", "Admin", stage);
+        } else {
+            Alerts.warning("Invalid username or password!\n" +
                     "Username: Admin\n" +
                     "Password: 1234");
         }
     }
-    private boolean isValidUser(){
+
+    private boolean isValidUser() {
         String username = txtUsername.getText();
         String password = txtPassword.getText();
-        boolean usernameMatches= username.equals(admin.getUserName());
-        boolean passwordMatches= password.equals(admin.getPassword());
+        boolean usernameMatches = username.equals(admin.getUserName());
+        boolean passwordMatches = password.equals(admin.getPassword());
         return passwordMatches && usernameMatches;
     }
 }

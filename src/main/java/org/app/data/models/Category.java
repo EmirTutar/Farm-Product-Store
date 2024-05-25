@@ -28,7 +28,7 @@ public class Category implements Serializable {
 
     public void addSubCategory(String newSubCategory) throws InvalidTextInputException{
         if(subCategories.contains(newSubCategory)){
-            throw new InvalidTextInputException("En sub-kategori med navnet: " + newSubCategory + " allerede finnes!");
+            throw new InvalidTextInputException("A sub-category with the name: \" + newSubCategory + \" already exists!\"");
         }
         this.subCategories.add(newSubCategory);
     }
@@ -41,3 +41,4 @@ public class Category implements Serializable {
                 '}';
     }
 }
+

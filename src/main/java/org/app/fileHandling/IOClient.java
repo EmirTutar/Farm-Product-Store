@@ -12,7 +12,6 @@ import javafx.scene.control.Alert;
 import org.app.validation.Alerts;
 import org.app.validation.ioExceptions.InvalidTypeException;
 
-
 import java.util.ArrayList;
 
 public class IOClient<T> {
@@ -51,7 +50,7 @@ public class IOClient<T> {
             saveThread.call();
             loadingAlert.close();
             if(!fileInfo.getFullPath().equals("DataFraApp/Database/categories.bin")){
-                Alerts.success("Filen din ble lagret i: " + fileInfo.getFullPath());
+                Alerts.success("Your file was saved at: " + fileInfo.getFullPath());
             }
         } catch (InvalidTypeException ignore) {}
     }

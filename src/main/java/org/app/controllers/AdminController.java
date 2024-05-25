@@ -1,6 +1,5 @@
 package org.app.controllers;
 
-
 import org.app.data.dataCollection.CategoryCollection;
 import org.app.data.models.Product;
 import org.app.fileHandling.FileInfo;
@@ -61,7 +60,6 @@ public class AdminController implements Initializable {
 
     private final NumberConversion.StringToDouble STR_2_DOUBLE = new NumberConversion.StringToDouble();
 
-
     private void setOpenedFile(String openedFile) {
         this.openedFile = openedFile;
     }
@@ -69,7 +67,6 @@ public class AdminController implements Initializable {
     private String getOpenedFile() {
         return openedFile;
     }
-
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -102,9 +99,7 @@ public class AdminController implements Initializable {
 
     @FXML
     void registerProduct() {
-
         try {
-
             String product_name = Validator.validateName(name.getText());
             String category = Validator.validateCategory(categoriesCombobox.getValue());
             String subcategory = Validator.validateCategory(subcategoryCombobox.getValue());
@@ -115,14 +110,14 @@ public class AdminController implements Initializable {
             COLLECTION.addProducts(product);
             reset();
 
-            Alerts.success("Ny Produkt Opprettet");
+            Alerts.success("New Product Created");
         } catch (InvalidTextInputException | EmptyFieldException | InvalidNumberFormat e) {
             Alerts.warning(e.getMessage());
         }
     }
 
     private void reset() {
-        // Resetter feltene
+        // Resets the fields
         name.setText("");
         specifications.setText("");
         price.setText("");
@@ -130,8 +125,7 @@ public class AdminController implements Initializable {
 
     @FXML
     void open() {
-        boolean doOpen = Alerts.confirm("Vil du erstatte dataene du har i tabellen " +
-                                        "med dataene som ligger i filen som du skal laste opp?");
+        boolean doOpen = Alerts.confirm("Do you want to replace the data in the table with the data from the file you are about to upload?");
         if (doOpen) {
             String path = "DataFraApp/" + PATH_DIALOG_BOX.getPathToOpen();
             try {
@@ -140,13 +134,13 @@ public class AdminController implements Initializable {
                 PATH_DIALOG_BOX.fileNotFound(path);
                 FileInfo file = new FileInfo(path);
                 IOClient<Product> io = new IOClient<>(file);
-                io.runOpenThread("Åpner filen...");
+                io.runOpenThread("Opening file...");
                 setOpenedFile(file.getFullPath());
             } catch (FileDontExistsException | NullPointerException | InvalidExtensionException e) {
                 Alerts.warning(e.getMessage());
             }
         } else {
-            Alerts.success("Dataene er ikke erstattet.");
+            Alerts.success("Data was not replaced.");
         }
     }
 
@@ -155,7 +149,7 @@ public class AdminController implements Initializable {
             return PATH_DIALOG_BOX.getPathToSave();
         }
 
-        boolean newFile = Alerts.confirm("Vil du lagre filen som en ny fil?");
+        boolean newFile = Alerts.confirm("Do you want to save the file as a new file?");
         if (newFile) {
             return PATH_DIALOG_BOX.getPathToSave();
         } else {
@@ -177,11 +171,10 @@ public class AdminController implements Initializable {
             }
             FileInfo file = new FileInfo(path);
             IOClient<Product> io = new IOClient<>(file, components);
-            io.runSaveThread("Lagrer Filen...");
+            io.runSaveThread("Saving file...");
         } else {
-            Alerts.warning("Ingenting er lagret.");
+            Alerts.warning("Nothing was saved.");
         }
-
     }
 
     @FXML
@@ -212,8 +205,8 @@ public class AdminController implements Initializable {
     void editCategory(TableColumn.CellEditEvent<Product, String> event) {
         try {
             event.getRowValue().setCategory(event.getNewValue());
-            event.getRowValue().setSubCategory("Velg på nytt");
-            Alerts.success("Du har endret foreldre kategori.\nVelg en ny subkategori.");
+            event.getRowValue().setSubCategory("Select again");
+            Alerts.success("You have changed the parent category.\nPlease select a new subcategory.");
             COLLECTION.setModified(true);
             tableview.refresh();
         } catch (Exception e) {
@@ -251,7 +244,7 @@ public class AdminController implements Initializable {
     @FXML
     void delete() {
         ObservableList<Product> selectedRows = tableSelectionModel.getSelectedItems();
-        boolean doRemove = Alerts.confirm("Er du sikker på at du vil slette varen/varene du har valgt?");
+        boolean doRemove = Alerts.confirm("Are you sure you want to delete the selected item(s)?");
         if (doRemove) {
             COLLECTION.deleteSelectedProducts(selectedRows);
             tableview.refresh();
@@ -263,16 +256,16 @@ public class AdminController implements Initializable {
     @FXML
     void logOut() {
         if (COLLECTION.isModified()) {
-            boolean response = Alerts.confirm("Vil du lagre alle endringer?");
+            boolean response = Alerts.confirm("Do you want to save all changes?");
             if (response) {
                 COLLECTION.saveData();
             } else {
-                Alerts.success("Endringer er ikke lagret");
+                Alerts.success("Changes were not saved");
                 COLLECTION.setReloadProducts(true);
                 COLLECTION.getProducts().clear();
                 COLLECTION.setModified(false);
             }
-        } else if(CATEGORY_COLLECTION.isModified()) {
+        } else if (CATEGORY_COLLECTION.isModified()) {
             CATEGORY_COLLECTION.saveCategories();
         }
         CATEGORY_COLLECTION.getCategories().clear();
@@ -282,6 +275,6 @@ public class AdminController implements Initializable {
 
     @FXML
     void showCategoryRegister() {
-       Load.openCategoryPopup();
+        Load.openCategoryPopup();
     }
 }

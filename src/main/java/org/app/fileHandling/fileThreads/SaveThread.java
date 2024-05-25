@@ -26,7 +26,7 @@ public class SaveThread<T> extends Task<Void> {
             case ".bin":
                 return new SaveBinBehavior<>();
             default:
-                throw new InvalidExtensionException("Filtype støttes ikke.\nLagre kun *.bin & *.csv");
+                throw new InvalidExtensionException("File type not supported.\nOnly open *.bin & *.csv");
         }
     }
 

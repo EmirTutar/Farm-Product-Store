@@ -13,26 +13,26 @@ import javafx.scene.control.*;
 import java.util.ArrayList;
 
 /**
- * klassen samler data til TableView og metodene gir muligheten for å behandle data.
+ * The class collects data for the TableView and its methods allow for data manipulation.
  */
 public class TableViewCollection {
 
     private final ObservableList<Product> PRODUCTS = FXCollections.observableArrayList();
     private boolean reloadProducts = true;
     private boolean modified = false;
-    private String filterChoice = "Navn";
+    private String filterChoice = "Name";
     private String loadedFile;
     private static TableViewCollection INSTANCE;
 
     /**
-     * Når et objekt av denne klasse blir opprettet, skal den alltid passe på om dataene i tableview er endret.
+     * When an object of this class is created, it always monitors if the data in the TableView has been changed.
      */
     private TableViewCollection() {
         PRODUCTS.addListener((ListChangeListener<Product>) change -> setModified(true));
     }
 
     /**
-     * Bruker en singel instans av denne klassen slik at dataene i tableview synkroniserer.
+     * Uses a single instance of this class so that the data in the TableView synchronizes.
      */
     public static TableViewCollection getINSTANCE() {
         if (INSTANCE == null) INSTANCE = new TableViewCollection();
@@ -40,19 +40,19 @@ public class TableViewCollection {
     }
 
     /**
-     * Laster opp alle produkter fra en fil og legger den til obsListen: <b>products</b>
+     * Loads all products from a file and adds them to the ObservableList: <b>products</b>
      */
     public void loadProducts(String filePath) {
         IOClient<Product> open = new IOClient<>(new FileInfo(filePath));
         loadedFile = filePath;
         if (reloadProducts) {
-            open.runOpenThread("Laster opp produkter...");
+            open.runOpenThread("Loading products...");
             reloadProducts = false;
         }
     }
 
     /**
-     * Sletter alle produkter som er valgt fra tabellen
+     * Deletes all selected products from the table
      */
     public void deleteSelectedProducts(ObservableList<Product> selectedProducts) {
         if (selectedProducts.size() >= 1) {
@@ -62,7 +62,7 @@ public class TableViewCollection {
     }
 
     /**
-     * Legger en ny produkt i tabellen
+     * Adds a new product to the table
      */
     public void addProducts(Product product) {
         for (Product p : getProducts()) {
@@ -76,36 +76,35 @@ public class TableViewCollection {
     }
 
     /**
-     * Oppdaterer filen når bruker logger ut eller programmen slutter
+     * Updates the file when the user logs out or the program exits
      */
     public void saveData() {
         ArrayList<Product> data = new ArrayList<>(getProducts());
-        IOClient <Product> save = new IOClient<>(new FileInfo(loadedFile), data);
-        save.runSaveThread("lagrer filen...");
+        IOClient<Product> save = new IOClient<>(new FileInfo(loadedFile), data);
+        save.runSaveThread("Saving file...");
         setModified(false);
     }
 
     /**
-     * Viser alle produkter i tabellen
+     * Displays all products in the table
      */
     public void setTableView(TableView<Product> tableView) {
         tableView.setItems(getProducts());
     }
 
-
     /**
-     * Gjør det mulig til å filtrere tabellen ved produkt navn, pris, kategori osv.
+     * Allows filtering the table by product name, price, category, etc.
      */
     public void fillFilterComboBox(ComboBox<String> filterOptions) {
-        String[] filterCats = {"Produkt ID", "Navn", "Kategori", "Spesifikasjoner", "Pris"};
+        String[] filterCats = {"Product ID", "Name", "Category", "Specifications", "Price"};
         ObservableList<String> filterCategories = FXCollections.observableArrayList(filterCats);
         filterOptions.setItems(filterCategories);
-        filterOptions.setValue("Navn");
+        filterOptions.setValue("Name");
         filterOptions.setOnAction(e -> filterChoice = filterOptions.getValue());
     }
 
     /**
-     * Filtrerer og søker gjennom tabellen
+     * Filters and searches the table
      */
     public void filterTableView(TableView<Product> tableView, TextField filterTextField) {
         FilteredList<Product> filteredList = new FilteredList<>(PRODUCTS, product -> true);
@@ -119,27 +118,27 @@ public class TableViewCollection {
                 String filter = newValue.toLowerCase();
 
                 switch (filterChoice) {
-                    case "Produkt ID":
+                    case "Product ID":
                         if (nr.equals(filter)) {
                             return true;
                         }
                         break;
-                    case "Navn":
+                    case "Name":
                         if (name.contains(filter)) {
                             return true;
                         }
                         break;
-                    case "Kategori":
+                    case "Category":
                         if (category.contains(filter)) {
                             return true;
                         }
                         break;
-                    case "Spesifikasjoner":
+                    case "Specifications":
                         if (specs.contains(filter)) {
                             return true;
                         }
                         break;
-                    case "Pris":
+                    case "Price":
                         if (price.contains(filter)) {
                             return true;
                         }
@@ -155,7 +154,7 @@ public class TableViewCollection {
     }
 
     /**
-     * Getter og Setter methods
+     * Getter and Setter methods
      */
     public void setProducts(ArrayList<Product> items) {
         for (Product i : items) {

@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class Load {
 
-    /** Laster opp en fxml fil */
+    /** Loads an FXML file */
     public static void window(String FXMLFilepath, String title, Stage stage){
         try {
             FXMLLoader loader = new FXMLLoader(Load.class.getResource(FXMLFilepath));
@@ -23,24 +23,24 @@ public class Load {
         } catch (IOException e){ e.printStackTrace(); }
     }
 
-    /** Åpner en ny vindu for kategori oppretting */
+    /** Opens a new window for category creation */
     public static void openCategoryPopup(){
         try {
-            Load.window("category.fxml","Endre Kategori",new Stage());
+            Load.window("category.fxml", "Edit Category", new Stage());
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    /** Spør brukeren om å lagre endringer før programmen slutter */
+    /** Asks the user to save changes before the program exits */
     public static void exit(Stage stage){
         TableViewCollection collection = TableViewCollection.getINSTANCE();
         if(collection.isModified()){
-            boolean response = Alerts.confirm("Vil du lagre alle endringer?");
+            boolean response = Alerts.confirm("Do you want to save all changes?");
             if(response){
                 collection.saveData();
             } else {
-                Alerts.success("Endringer er ikke lagret");
+                Alerts.success("Changes were not saved");
             }
         }
         CategoryCollection categoryCollection = CategoryCollection.getInstance();

@@ -34,7 +34,7 @@ public class CategoryCollection {
     }
 
     /**
-     * legger nye kategorier
+     * Adds new categories
      */
     public void addCategory(Category toAdd) {
         mainCategories.add(toAdd.getName());
@@ -42,37 +42,37 @@ public class CategoryCollection {
     }
 
     /**
-     * Når listen av kategorier ble endret, må alle combobokser oppdateres
+     * When the list of categories is changed, all combo boxes must be updated
      */
     public void updateCategoriesOnChange(ComboBox<String> categoryOptions, ComboBox<String> subCategoryOptions) {
         CATEGORIES.addListener((ListChangeListener<Category>) change -> setComboBoxes(categoryOptions, subCategoryOptions));
     }
 
     /**
-     * Når hoved kategori ble endret, må sub kategoriene oppdateres
+     * When the main category is changed, the subcategories must be updated
      */
     public void updateSubCategoriesOnChange(ComboBox<String> categoryOptions) {
         categoryOptions.valueProperty().addListener((observableValue, oldValue, newValue) -> loadSubCategories(newValue));
     }
 
     /**
-     * Åpner kategorier filen
+     * Opens the categories file
      */
     public void loadCategories() {
         IOClient<Category> openFile = new IOClient<>(categoryFile);
-        openFile.runOpenThread("Laster opp kategorier...");
+        openFile.runOpenThread("Loading categories...");
     }
 
     /**
-     * Lagrer kategorier filen
+     * Saves the categories file
      */
     public void saveCategories() {
         IOClient<Category> saveFile = new IOClient<>(categoryFile, new ArrayList<>(CATEGORIES));
-        saveFile.runSaveThread("Lagrer nye kategorier...");
+        saveFile.runSaveThread("Saving new categories...");
     }
 
     /**
-     * Setter verdier til kategori combobokser
+     * Sets values to category combo boxes
      */
     public void setComboBoxes(ComboBox<String> categoryOptions, ComboBox<String> subCategoryOptions) {
         categoryOptions.setItems(mainCategories);
@@ -80,7 +80,7 @@ public class CategoryCollection {
     }
 
     /**
-     * Fyller opp sub kategori obslist med verdier basert på hoved kategorien
+     * Fills the subcategory observable list with values based on the main category
      */
     public void loadSubCategories(String value) {
         subCategories.clear();
@@ -92,7 +92,7 @@ public class CategoryCollection {
     }
 
     /**
-     * Fyller opp sub-kategorier combobox med riktige verdier på tableview
+     * Fills the subcategories combo box with the correct values on the TableView
      */
     public void updateSubCategoriesOnTableView(TableView<Product> tableView) {
         tableView.setRowFactory(tv -> {
@@ -110,7 +110,7 @@ public class CategoryCollection {
     }
 
     /**
-     * Getter - Setter  metoder
+     * Getter - Setter methods
      */
 
     public ObservableList<String> getCategories() {

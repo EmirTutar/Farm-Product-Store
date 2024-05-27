@@ -3,10 +3,10 @@ package org.app.validation;
 import javafx.util.converter.DoubleStringConverter;
 import javafx.util.converter.IntegerStringConverter;
 
-/** Brukes til å konvertere en verdi til enten Integer eller Double
- *  Den har vi brukt til å konvertere og validere nr og pris til komponentene
- *  når de blir oppdatert direkte i tableView-en */
-
+/**
+ * Verwendet zur Konvertierung von Werten in Integer oder Double.
+ * Diese wird verwendet, um Nummern und Preise in der TableView zu konvertieren und zu validieren.
+ */
 public class NumberConversion {
     public static class StringtoInteger extends IntegerStringConverter {
         @Override
@@ -14,7 +14,7 @@ public class NumberConversion {
             try {
                 return super.fromString(value);
             } catch (NumberFormatException ignored) {
-                Alerts.warning("Ugyldig verdi: " + value);
+                Alerts.warning("Ungültiger Wert: " + value);
             }
             return null;
         }
@@ -26,7 +26,7 @@ public class NumberConversion {
             try {
                 return super.fromString(value);
             } catch (NumberFormatException ignored) {
-                Alerts.warning("Ugyldig verdi: " + value);
+                Alerts.warning("Ungültiger Wert: " + value);
             }
             return null;
         }

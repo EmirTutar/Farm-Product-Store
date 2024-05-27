@@ -16,7 +16,7 @@ public class LoginController {
     private final User admin = new User("Admin","1234");
 
     @FXML
-    void loggInn(ActionEvent event) {
+    public void loggInn(ActionEvent event) {
         Stage stage = (Stage) loginPane.getScene().getWindow();
         if (isValidUser()) {
             Load.window("adminView.fxml", "Admin", stage);

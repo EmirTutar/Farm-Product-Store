@@ -25,14 +25,14 @@ public class Alerts {
     }
 
     public static boolean confirm(String message){
-        ButtonType buttonYES = new ButtonType("Ja");
-        ButtonType buttonNO = new ButtonType("Nei");
+        ButtonType buttonYES = new ButtonType("Yes");
+        ButtonType buttonNO = new ButtonType("No");
 
         confirm.getButtonTypes().setAll(buttonYES, buttonNO);
         confirm.setHeaderText(message);
         confirm.showAndWait();
 
-        return confirm.getResult().getText().equals("Ja");
+        return confirm.getResult().getText().equals("Yes");
     }
 
     public synchronized static <V> Alert showLoadingDialog(Task<V> task, String dialogMessage){

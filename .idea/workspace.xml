@@ -4,42 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8ada2f6-0544-450e-9f72-c2360f14577d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_14_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_14_0_22.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_win_14_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_14_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_win_14_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_14_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_win_14_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_14_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_14_0_2.xml" beforeDir="false" />
+    <list default="true" id="b8ada2f6-0544-450e-9f72-c2360f14577d" name="Default Changelist" comment="Translated in English">
+      <change afterPath="$PROJECT_DIR$/src/test/java/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/CAdminControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/CCategoryRegisterControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/CLoginControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/DDCCategoryCollectionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/DDCTableViewCollectionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/DFItemsFormatTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/DFParseItemsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/FTOpenThreadTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/FTSaveThreadTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/FileInfoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/IOClientTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/LoadTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/MCategoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/MProductTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/OOpenAbstractTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/OOpenBinBehaviorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/OOpenCsvBehaviorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/PathDialogBoxTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/SSaveAbstractTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/SaveBinBehaviorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/SaveCsvBehaviorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/UserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_05_2021_20_28_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_05_2021_20_28__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFraApp/Database/categories.bin" beforeDir="false" afterPath="$PROJECT_DIR$/DataFraApp/Database/categories.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFraApp/Database/products.bin" beforeDir="false" afterPath="$PROJECT_DIR$/DataFraApp/Database/products.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Farm-Product-Store.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/Load.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/Load.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/PathDialogBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/PathDialogBox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/controllers/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/controllers/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/controllers/CategoryRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/controllers/CategoryRegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/app/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/controllers/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/data/dataCollection/CategoryCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/data/dataCollection/CategoryCollection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/data/dataCollection/TableViewCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/data/dataCollection/TableViewCollection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/data/dataFormats/ItemsFormat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/data/dataFormats/ItemsFormat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/data/dataFormats/ParseItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/data/dataFormats/ParseItems.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/data/models/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/data/models/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/fileHandling/IOClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/fileHandling/IOClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/fileHandling/fileThreads/OpenThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/fileHandling/fileThreads/OpenThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/fileHandling/fileThreads/SaveThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/fileHandling/fileThreads/SaveThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/fileHandling/open/OpenCsvBehavior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/fileHandling/open/OpenCsvBehavior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/app/adminView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/app/adminView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/app/category.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/app/category.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/app/loginView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/app/loginView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/validation/Alerts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/validation/Alerts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/validation/NumberConversion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/validation/NumberConversion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/validation/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/validation/Validator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/app/loginViewStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/app/loginViewStyle.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +50,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
+        <option value="JavaFXApplication" />
+        <option value="CSS File" />
         <option value="Class" />
       </list>
     </option>
@@ -60,12 +59,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "EmirTutar"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;EmirTutar&quot;
   }
-}]]></component>
+}</component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
       <filtered-out-file-type name="LOCAL_BRANCH" />
@@ -74,18 +73,18 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/EmirTutar/Farm-Product-Store.git",
-    "accountId": "15dd4ad9-8ffd-4b2c-ade1-07de45893d43"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/EmirTutar/Farm-Product-Store.git&quot;,
+    &quot;accountId&quot;: &quot;15dd4ad9-8ffd-4b2c-ade1-07de45893d43&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="1qLgEWMqVjQsqhrblteUkKt4vGf" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -97,32 +96,74 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.App.executor": "Run",
+    "JUnit.All in Farm-Product-Store.executor": "Run",
+    "JUnit.AppTest (1).executor": "Run",
+    "JUnit.AppTest.executor": "Coverage",
+    "JUnit.CAdminControllerTest (1).executor": "Run",
+    "JUnit.CAdminControllerTest.executor": "Run",
+    "JUnit.CCategoryRegisterControllerTest.executor": "Coverage",
+    "JUnit.CategoryTest.executor": "Coverage",
+    "JUnit.DDCCategoryCollectionTest.executor": "Coverage",
+    "JUnit.DDCTableViewCollectionTest.executor": "Coverage",
+    "JUnit.DFItemsFormatTest.executor": "Coverage",
+    "JUnit.DFParseItemsTest.executor": "Coverage",
+    "JUnit.FTOpenThreadTest.executor": "Coverage",
+    "JUnit.FTSaveThreadTest.executor": "Coverage",
+    "JUnit.FileInfoTest.executor": "Coverage",
+    "JUnit.IOClientTest.executor": "Coverage",
+    "JUnit.LoadTest.executor": "Coverage",
+    "JUnit.LoginControllerTest (1).executor": "Run",
+    "JUnit.LoginControllerTest.executor": "Run",
+    "JUnit.MCategoryTest.executor": "Coverage",
+    "JUnit.MProductTest.executor": "Coverage",
+    "JUnit.OOpenAbstractTest.executor": "Coverage",
+    "JUnit.OOpenBinBehaviorTest.executor": "Coverage",
+    "JUnit.OOpenCsvBehaviorTest.executor": "Coverage",
+    "JUnit.PathDialogBoxTest (1).executor": "Run",
+    "JUnit.PathDialogBoxTest.executor": "Coverage",
+    "JUnit.PathDialogBoxTest.testGetPathToSave.executor": "Run",
+    "JUnit.SSaveAbstractTest.executor": "Coverage",
+    "JUnit.SaveBinBehaviorTest.executor": "Coverage",
+    "JUnit.SaveCsvBehaviorTest.executor": "Coverage",
+    "JUnit.UserTest (1).executor": "Coverage",
+    "JUnit.UserTest.executor": "Coverage",
+    "Maven.Farm-Product-Store [clean].executor": "Run",
+    "Maven.Farm-Product-Store [test].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/etuta/IdeaProjects/Farm-Product-Store/src/main/resources",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\etuta\IdeaProjects\Farm-Product-Store\src\main\resources" />
+      <recent name="C:\Users\etuta\IdeaProjects\Farm-Product-Store\src\main\resources\org\app" />
       <recent name="C:\Users\nimab\Desktop\Farm-Product-Store\DataFraApp\Database" />
       <recent name="C:\Users\nimab\Desktop\Farm-Product-Store\DataFraApp" />
       <recent name="C:\Users\nimab\Desktop\Farm-Product-Store\.idea" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
       <recent name="org.app" />
       <recent name="org" />
-      <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.SSaveAbstractTest">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -149,6 +190,118 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FileInfoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Farm-Product-Store" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FileInfoTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="--add-opens=org.junit.platform.commons/org.junit.platform.commons.util=ALL-UNNAMED --add-opens=org.junit.platform.commons/org.junit.platform.commons.logging=ALL-UNNAMED --add-opens=javafx.graphics/com.sun.javafx.application=ALL-UNNAMED" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IOClientTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Farm-Product-Store" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="IOClientTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="--add-opens=org.junit.platform.commons/org.junit.platform.commons.util=ALL-UNNAMED --add-opens=org.junit.platform.commons/org.junit.platform.commons.logging=ALL-UNNAMED --add-opens=javafx.graphics/com.sun.javafx.application=ALL-UNNAMED" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SSaveAbstractTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Farm-Product-Store" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SSaveAbstractTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="--add-opens=org.junit.platform.commons/org.junit.platform.commons.util=ALL-UNNAMED --add-opens=org.junit.platform.commons/org.junit.platform.commons.logging=ALL-UNNAMED --add-opens=javafx.graphics/com.sun.javafx.application=ALL-UNNAMED" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SaveBinBehaviorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Farm-Product-Store" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SaveBinBehaviorTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="--add-opens=org.junit.platform.commons/org.junit.platform.commons.util=ALL-UNNAMED --add-opens=org.junit.platform.commons/org.junit.platform.commons.logging=ALL-UNNAMED --add-opens=javafx.graphics/com.sun.javafx.application=ALL-UNNAMED" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SaveCsvBehaviorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Farm-Product-Store" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SaveCsvBehaviorTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="--add-opens=org.junit.platform.commons/org.junit.platform.commons.util=ALL-UNNAMED --add-opens=org.junit.platform.commons/org.junit.platform.commons.logging=ALL-UNNAMED --add-opens=javafx.graphics/com.sun.javafx.application=ALL-UNNAMED" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Farm-Product-Store" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.UserTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="--add-opens=org.junit.platform.commons/org.junit.platform.commons.util " />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="Farm-Product-Store" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="--add-opens=org.junit.platform.commons/org.junit.platform.commons.util=ALL-UNNAMED --add-opens=org.junit.platform.commons/org.junit.platform.commons.logging=ALL-UNNAMED --add-opens=javafx.graphics/com.sun.javafx.application=ALL-UNNAMED" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Farm-Product-Store" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="--add-opens=org.junit.platform.commons/org.junit.platform.commons.util=ALL-UNNAMED --add-opens=org.junit.platform.commons/org.junit.platform.commons.logging=ALL-UNNAMED" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.App" />
+      <item itemvalue="JUnit.UserTest" />
+      <item itemvalue="JUnit.SSaveAbstractTest" />
+      <item itemvalue="JUnit.SaveCsvBehaviorTest" />
+      <item itemvalue="JUnit.SaveBinBehaviorTest" />
+      <item itemvalue="JUnit.FileInfoTest" />
+      <item itemvalue="JUnit.IOClientTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SSaveAbstractTest" />
+        <item itemvalue="JUnit.SaveCsvBehaviorTest" />
+        <item itemvalue="JUnit.SaveBinBehaviorTest" />
+        <item itemvalue="JUnit.FileInfoTest" />
+        <item itemvalue="JUnit.IOClientTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -180,8 +333,18 @@
       <workItem from="1620150120693" duration="746000" />
       <workItem from="1620150877394" duration="699000" />
       <workItem from="1620165615551" duration="1012000" />
-      <workItem from="1716639099971" duration="4621000" />
+      <workItem from="1716639099971" duration="4935000" />
+      <workItem from="1716644062482" duration="31523000" />
     </task>
+    <task id="LOCAL-00001" summary="Translated in English">
+      <option name="closed" value="true" />
+      <created>1716643928876</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1716643928876</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,6 +377,8 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
+    <MESSAGE value="Translated in English" />
+    <option name="LAST_COMMIT_MESSAGE" value="Translated in English" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -222,15 +387,34 @@
           <properties class="java.lang.ClassNotFoundException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/org/app/fileHandling/FileInfo.java</url>
-          <line>5</line>
-          <properties class="org.app.fileHandling.FileInfo">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Farm_Product_Store$IOClientTest.ic" NAME="IOClientTest Coverage Results" MODIFIED="1716771260537" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/Farm_Product_Store$SaveCsvBehaviorTest.ic" NAME="SaveCsvBehaviorTest Coverage Results" MODIFIED="1716771346074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/Farm_Product_Store$FTSaveThreadTest.ic" NAME="FTSaveThreadTest Coverage Results" MODIFIED="1716770113041" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/Farm_Product_Store$SaveBinBehaviorTest.ic" NAME="SaveBinBehaviorTest Coverage Results" MODIFIED="1716771320849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/Farm_Product_Store$PathDialogBoxTest.ic" NAME="PathDialogBoxTest Coverage Results" MODIFIED="1716761193079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/Farm_Product_Store$FileInfoTest.ic" NAME="FileInfoTest Coverage Results" MODIFIED="1716771296067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/Farm_Product_Store$UserTest__1_.ic" NAME="UserTest (1) Coverage Results" MODIFIED="1716761081445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/Farm_Product_Store$SSaveAbstractTest.ic" NAME="SSaveAbstractTest Coverage Results" MODIFIED="1716771413210" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/Farm_Product_Store$AppTest.ic" NAME="AppTest Coverage Results" MODIFIED="1716761293900" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/Farm_Product_Store$MCategoryTest.ic" NAME="MCategoryTest Coverage Results" MODIFIED="1716769260620" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/Farm_Product_Store$DFItemsFormatTest.ic" NAME="DFItemsFormatTest Coverage Results" MODIFIED="1716760995948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/Farm_Product_Store$UserTest.ic" NAME="UserTest Coverage Results" MODIFIED="1716761145928" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/Farm_Product_Store$OOpenAbstractTest.ic" NAME="OOpenAbstractTest Coverage Results" MODIFIED="1716770651884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/Farm_Product_Store$FTOpenThreadTest.ic" NAME="FTOpenThreadTest Coverage Results" MODIFIED="1716769874584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/Farm_Product_Store$CCategoryRegisterControllerTest.ic" NAME="CCategoryRegisterControllerTest Coverage Results" MODIFIED="1716761025649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/Farm_Product_Store$MProductTest.ic" NAME="MProductTest Coverage Results" MODIFIED="1716769189233" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/Farm_Product_Store$DDCTableViewCollectionTest.ic" NAME="DDCTableViewCollectionTest Coverage Results" MODIFIED="1716761039700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/Farm_Product_Store$DFParseItemsTest.ic" NAME="DFParseItemsTest Coverage Results" MODIFIED="1716761003925" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/Farm_Product_Store$CategoryTest.ic" NAME="CategoryTest Coverage Results" MODIFIED="1716746017520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>org.app.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Farm_Product_Store$LoadTest.ic" NAME="LoadTest Coverage Results" MODIFIED="1716761216584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/Farm_Product_Store$DDCCategoryCollectionTest.ic" NAME="DDCCategoryCollectionTest Coverage Results" MODIFIED="1716761051334" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/Farm_Product_Store$OOpenCsvBehaviorTest.ic" NAME="OOpenCsvBehaviorTest Coverage Results" MODIFIED="1716770846739" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/Farm_Product_Store$OOpenBinBehaviorTest.ic" NAME="OOpenBinBehaviorTest Coverage Results" MODIFIED="1716770747192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>

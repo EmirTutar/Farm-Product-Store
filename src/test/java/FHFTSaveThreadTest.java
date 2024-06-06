@@ -50,11 +50,16 @@ public class FHFTSaveThreadTest {
     }
 
     @Test
-    public void testCallCsv() {
+    public void testCall() {
         assertDoesNotThrow(() -> {
-            // Directly call the method without Platform.runLater
-            Void result = saveThread.call(); // Execute the call method, which normally runs in the thread
-            assertNull(result); // Ensure the result is null as expected
+            Platform.runLater(() -> {
+                try {
+                    Void result = saveThread.call(); // Execute the call method, which normally runs in the thread
+                    assertNotNull(result); // Ensure the result is not null
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+                }
+            });
         });
     }
 

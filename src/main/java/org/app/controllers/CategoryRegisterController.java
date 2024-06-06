@@ -5,6 +5,7 @@ import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
@@ -22,12 +23,25 @@ import java.util.ResourceBundle;
 
 public class CategoryRegisterController implements Initializable {
 
-    @FXML private AnchorPane parentPane;
-    @FXML private TextField categoryTextField;
-    @FXML private TextField subCategoryTextField;
-    @FXML private ListView<String> subCategoryListView;
-    private final ObservableList<String> subCategories = FXCollections.observableArrayList();
-    private final CategoryCollection CATEGORY_COLLECTION = CategoryCollection.getInstance();
+    @FXML
+    public Button addNewCategoryButton;
+
+    @FXML
+    public Button cancelButton;
+
+    @FXML
+    public Button addNewSubCategoryButton;
+
+    @FXML
+    public AnchorPane parentPane;
+    @FXML
+    public TextField categoryTextField;
+    @FXML
+    public TextField subCategoryTextField;
+    @FXML
+    public ListView<String> subCategoryListView;
+    public final ObservableList<String> subCategories = FXCollections.observableArrayList();
+    public final CategoryCollection CATEGORY_COLLECTION = CategoryCollection.getInstance();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -40,7 +54,7 @@ public class CategoryRegisterController implements Initializable {
         try {
             String categoryName = Validator.validateCategory(categoryTextField.getText());
 
-            if(!CATEGORY_COLLECTION.getCategories().contains(categoryName)){
+            if (!CATEGORY_COLLECTION.getCategories().contains(categoryName)) {
                 Category newCategory = new Category(categoryName);
                 newCategory.setSubCategories(new ArrayList<>(subCategories));
                 CATEGORY_COLLECTION.addCategory(newCategory);
@@ -65,7 +79,7 @@ public class CategoryRegisterController implements Initializable {
             String category = Validator.validateCategory(categoryTextField.getText());
             String subCategoryName = Validator.validateCategory(subCategoryTextField.getText());
 
-            for (Category c: CategoryCollection.CATEGORIES) {
+            for (Category c : CategoryCollection.CATEGORIES) {
                 if (c.getName().equals(category)) {
                     c.addSubCategory(subCategoryName);
                     subCategories.add(subCategoryName);

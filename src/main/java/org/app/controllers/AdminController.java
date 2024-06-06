@@ -31,36 +31,40 @@ public class AdminController implements Initializable {
     @FXML
     private BorderPane adminPane;
     @FXML
-    private TextField name, price, txtFilter;
+    public TextField name;
     @FXML
-    private TextArea specifications;
+    public TextField price;
     @FXML
-    private ComboBox<String> categoriesCombobox;
+    public TextField txtFilter;
     @FXML
-    private ComboBox<String> subcategoryCombobox;
+    public TextArea specifications;
     @FXML
-    private ComboBox<String> filterComboBox;
+    public ComboBox<String> categoriesCombobox;
     @FXML
-    private TableView<Product> tableview;
+    public ComboBox<String> subcategoryCombobox;
     @FXML
-    private TableColumn<Product, String> categoryCol;
+    public ComboBox<String> filterComboBox;
     @FXML
-    private TableColumn<Product, String> subcategoryCol;
+    public TableView<Product> tableview;
     @FXML
-    private TableColumn<Product, Double> priceCol;
+    public TableColumn<Product, String> categoryCol;
     @FXML
-    private Label filenameLabel;
+    public TableColumn<Product, String> subcategoryCol;
+    @FXML
+    public TableColumn<Product, Double> priceCol;
+    @FXML
+    public Label filenameLabel;
     public static Label filenameLabelStatic;
 
     private TableSelectionModel<Product> tableSelectionModel;
-    private final TableViewCollection COLLECTION = TableViewCollection.getINSTANCE();
+    public final TableViewCollection COLLECTION = TableViewCollection.getINSTANCE();
     private final CategoryCollection CATEGORY_COLLECTION = CategoryCollection.getInstance();
     private String openedFile;
     private final PathDialogBox PATH_DIALOG_BOX = new PathDialogBox();
 
     private final NumberConversion.StringToDouble STR_2_DOUBLE = new NumberConversion.StringToDouble();
 
-    private void setOpenedFile(String openedFile) {
+    public void setOpenedFile(String openedFile) {
         this.openedFile = openedFile;
     }
 
@@ -124,7 +128,7 @@ public class AdminController implements Initializable {
     }
 
     @FXML
-    void open() {
+    public void open() {
         boolean doOpen = Alerts.confirm("Do you want to replace the data in the table with the data from the file you are about to upload?");
         if (doOpen) {
             String path = "DataFraApp/" + PATH_DIALOG_BOX.getPathToOpen();
@@ -158,7 +162,7 @@ public class AdminController implements Initializable {
     }
 
     @FXML
-    void save() {
+    public void save() {
         ArrayList<Product> components = new ArrayList<>(COLLECTION.getProducts());
         if (!components.isEmpty()) {
             String path = "DataFraApp/" + getPath();
@@ -190,7 +194,7 @@ public class AdminController implements Initializable {
     }
 
     @FXML
-    void editSpecs(TableColumn.CellEditEvent<Product, String> event) {
+    public void editSpecs(TableColumn.CellEditEvent<Product, String> event) {
         try {
             event.getRowValue().setSpecification(event.getNewValue());
             COLLECTION.setModified(true);
@@ -228,7 +232,7 @@ public class AdminController implements Initializable {
     }
 
     @FXML
-    void editPrice(TableColumn.CellEditEvent<Product, Double> event) {
+    public void editPrice(TableColumn.CellEditEvent<Product, Double> event) {
         try {
             event.getRowValue().setPrice(event.getNewValue());
             COLLECTION.setModified(true);
@@ -242,7 +246,7 @@ public class AdminController implements Initializable {
     }
 
     @FXML
-    void delete() {
+    public void delete() {
         ObservableList<Product> selectedRows = tableSelectionModel.getSelectedItems();
         boolean doRemove = Alerts.confirm("Are you sure you want to delete the selected item(s)?");
         if (doRemove) {
@@ -254,7 +258,7 @@ public class AdminController implements Initializable {
     }
 
     @FXML
-    void logOut() {
+    public void logOut() {
         if (COLLECTION.isModified()) {
             boolean response = Alerts.confirm("Do you want to save all changes?");
             if (response) {

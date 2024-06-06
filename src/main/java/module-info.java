@@ -1,6 +1,8 @@
 module Farm_Product_Store {
     requires javafx.controls;
     requires javafx.fxml;
+    requires javafx.swing;
+    requires javafx.base;
     requires org.junit.jupiter.api;
     requires org.testfx.junit5;
     requires org.testfx;

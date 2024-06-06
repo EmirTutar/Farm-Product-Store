@@ -14,4 +14,9 @@
       <module name="pc_configuration" target="11" />
     </bytecodeTargetLevel>
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Farm-Product-Store" options="--add-exports javafx.base/com.sun.javafx.logging=Farm_Product_Store" />
+    </option>
+  </component>
 </project>

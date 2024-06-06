@@ -1,36 +1,84 @@
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 import org.app.controllers.LoginController;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.testfx.api.FxRobot;
 import org.testfx.framework.junit5.ApplicationExtension;
 import org.testfx.framework.junit5.Start;
-import javafx.scene.Scene;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
+import org.testfx.util.WaitForAsyncUtils;
+
+import static java.lang.Thread.sleep;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.testfx.api.FxAssert.verifyThat;
+import static org.testfx.matcher.base.NodeMatchers.isVisible;
 
 @ExtendWith(ApplicationExtension.class)
 public class CLoginControllerTest {
 
-    private TextField txtUsername;
-    private TextField txtPassword;
     private LoginController controller;
 
     @Start
-    private void start(Stage stage) {
-        txtUsername = new TextField();
-        txtPassword = new TextField();
-        VBox root = new VBox(txtUsername, txtPassword);
-        controller = new LoginController();
-        // Hier müsste der Controller entsprechend initialisiert und die TextFields ihm zugewiesen werden
+    private void start(Stage stage) throws Exception {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/app/loginView.fxml")); // Pfad zur FXML-Datei anpassen
+        Parent root = loader.load();
+        controller = loader.getController();
         stage.setScene(new Scene(root));
         stage.show();
     }
 
     @Test
-    void testLoginFunctionality() {
-        txtUsername.setText("Admin");
-        txtPassword.setText("1234");
-        // Hier sollten Sie die Methode aufrufen, die getestet werden soll, z.B. controller.loggInn
-        // Prüfen Sie dann die Zustände, die nach der Aktion erwartet werden
+    void testLoginWithValidCredentials(FxRobot robot) throws InterruptedException {
+        robot.clickOn("#txtUsername").write("Admin");
+        robot.clickOn("#txtPassword").write("1234");
+        robot.clickOn("Log in");
+
+        WaitForAsyncUtils.waitForFxEvents();
+
+        // Annahme: Ein erfolgreicher Login führt zur Anzeige der AdminView
+        verifyThat("#adminPane", isVisible());
+        sleep(5000);
+    }
+
+    @Test
+    void testLoginWithInvalidUsername(FxRobot robot) throws InterruptedException {
+        robot.clickOn("#txtUsername").write("InvalidUser");
+        robot.clickOn("#txtPassword").write("1234");
+        robot.clickOn("Log in");
+
+        WaitForAsyncUtils.waitForFxEvents();
+
+        // Annahme: Ein fehlgeschlagener Login zeigt eine Warnung an
+        verifyThat("Invalid username or password!\nUsername: Admin\nPassword: 1234", isVisible());
+        sleep(5000);
+        robot.clickOn("OK");
+    }
+
+    @Test
+    void testLoginWithInvalidPassword(FxRobot robot) throws InterruptedException {
+        robot.clickOn("#txtUsername").write("Admin");
+        robot.clickOn("#txtPassword").write("wrongpassword");
+        robot.clickOn("Log in");
+
+        WaitForAsyncUtils.waitForFxEvents();
+
+        // Annahme: Ein fehlgeschlagener Login zeigt eine Warnung an
+        verifyThat("Invalid username or password!\nUsername: Admin\nPassword: 1234", isVisible());
+        sleep(5000);
+        robot.clickOn("OK");
+    }
+
+    @Test
+    void testLoginWithEmptyFields(FxRobot robot) throws InterruptedException {
+        robot.clickOn("Log in");
+
+        WaitForAsyncUtils.waitForFxEvents();
+
+        // Annahme: Ein fehlgeschlagener Login zeigt eine Warnung an
+        verifyThat("Invalid username or password!\nUsername: Admin\nPassword: 1234", isVisible());
+        sleep(5000);
+        robot.clickOn("OK");
     }
 }

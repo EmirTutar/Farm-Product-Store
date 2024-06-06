@@ -1,5 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://www.apache.org/maven/v4_0_0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://www.apache.org/maven/v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.app</groupId>
     <artifactId>Farm-Product-Store</artifactId>
@@ -14,12 +14,12 @@
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
-            <version>14.0.2</version>
+            <version>17.0.2</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
-            <version>14.0.2</version>
+            <version>17.0.2</version>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -51,6 +51,7 @@
             <version>4.0.16-alpha</version>
             <scope>compile</scope>
         </dependency>
+
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
@@ -68,6 +69,16 @@
             <artifactId>mockito-core</artifactId>
             <version>5.12.0</version>
             <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-graphics</artifactId>
+            <version>17.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-swing</artifactId>
+            <version>17.0.2</version>
         </dependency>
         <dependency>
             <groupId>org.mockito</groupId>
@@ -95,6 +106,9 @@
                         --add-exports javafx.graphics/com.sun.javafx.application=ALL-UNNAMED
                         --add-exports javafx.graphics/com.sun.javafx.application=org.testfx
                     </argLine>
+                    <argLine>
+                         --module-path ${java.home}/lib --add-modules javafx.controls,javafx.fxml,javafx.swing
+                    </argLine>
                 </configuration>
             </plugin>
             <plugin>
@@ -105,6 +119,28 @@
                     <mainClass>org.openjfx.App</mainClass>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.3.1</version>
+                <executions>
+                    <execution>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>resources</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.fxml</include>
+                    <include>**/*.css</include>
+                </includes>
+            </resource>
+        </resources>
     </build>
 </project>

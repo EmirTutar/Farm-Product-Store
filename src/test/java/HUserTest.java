@@ -2,7 +2,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.app.User;
 import org.junit.jupiter.api.Test;
 
-public class UserTest {
+public class HUserTest {
 
     @Test
     public void testUserCreation() {

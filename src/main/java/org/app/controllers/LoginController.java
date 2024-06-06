@@ -11,9 +11,12 @@ import org.app.validation.Alerts;
 
 public class LoginController {
 
-    @FXML BorderPane loginPane;
-    @FXML TextField txtUsername, txtPassword;
-    private final User admin = new User("Admin","1234");
+    @FXML
+    public BorderPane loginPane;
+    @FXML
+    public TextField txtUsername, txtPassword;
+    public final User admin = new User("Admin","1234");
+    public Button loginButton;
 
     @FXML
     public void loggInn(ActionEvent event) {
@@ -27,7 +30,7 @@ public class LoginController {
         }
     }
 
-    private boolean isValidUser() {
+    public boolean isValidUser() {
         String username = txtUsername.getText();
         String password = txtPassword.getText();
         boolean usernameMatches = username.equals(admin.getUserName());

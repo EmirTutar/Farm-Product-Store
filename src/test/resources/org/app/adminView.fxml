@@ -211,7 +211,7 @@
                               <TextFieldTableCell fx:factory="forTableColumn" />
                            </cellFactory>
                         </TableColumn>
-                        <TableColumn maxWidth="300.0" minWidth="-1.0" onEditCommit="#editSpecs" prefWidth="151.945068359375" text="Spesifikasjoner">
+                        <TableColumn maxWidth="300.0" minWidth="-1.0" onEditCommit="#editSpecs" prefWidth="151.945068359375" text="Specification">
                            <cellValueFactory>
                               <PropertyValueFactory property="specification" />
                            </cellValueFactory>

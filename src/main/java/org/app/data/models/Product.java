@@ -1,6 +1,5 @@
 package org.app.data.models;
 
-
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -12,7 +11,6 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
-
 
 public class Product implements Serializable {
     private static final long serialVersionUID = 1;
@@ -45,7 +43,6 @@ public class Product implements Serializable {
     }
 
     public void setProductID(Integer id) {
-
         this.productID = new SimpleIntegerProperty(id);
         Product.id = id;
     }
@@ -63,7 +60,7 @@ public class Product implements Serializable {
         return this.category.getValue();
     }
 
-    public void setCategory(String newCategory) throws InvalidTextInputException, EmptyFieldException{
+    public void setCategory(String newCategory) throws InvalidTextInputException, EmptyFieldException {
         String category = Validator.validateCategory(newCategory);
         this.category = new SimpleStringProperty(category);
     }
@@ -94,6 +91,7 @@ public class Product implements Serializable {
         this.price = new SimpleDoubleProperty(price);
     }
 
+    @Override
     public String toString() {
         return "{" + "\n" +
                 "\t\"productID\" :" + "\"" + getProductID() + "\"," + "\n" +
@@ -107,8 +105,7 @@ public class Product implements Serializable {
 
     public String csvFormat(String delimiter) {
         String format = "%s" + delimiter + "%s" + delimiter + "%s" + delimiter + "%s" + delimiter + "%s" + delimiter + "%s";
-        return String.format(format, getProductID(), getProductName(),
-                getCategory(), getSubCategory(), getSpecification(), getPrice());
+        return String.format(format, getProductID(), getProductName(), getCategory(), getSubCategory(), getSpecification(), getPrice());
     }
 
     private void writeObject(ObjectOutputStream ost) throws IOException {
@@ -122,7 +119,6 @@ public class Product implements Serializable {
     }
 
     private void readObject(ObjectInputStream ist) throws IOException, ClassNotFoundException {
-
         int productID = ist.readInt();
         String name = ist.readUTF();
         String category = ist.readUTF();

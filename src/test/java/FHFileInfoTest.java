@@ -2,7 +2,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import org.app.fileHandling.FileInfo;
 
-public class FileInfoTest {
+public class FHFileInfoTest {
 
     @Test
     public void testGetFullPath() {

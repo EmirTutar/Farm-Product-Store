@@ -1,15 +1,18 @@
 package org.app.data.dataCollection;
 
-import org.app.data.models.Product;
-import org.app.fileHandling.FileInfo;
-import org.app.fileHandling.IOClient;
-
 import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
-import javafx.scene.control.*;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TableRow;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+import org.app.data.models.Product;
+import org.app.fileHandling.FileInfo;
+import org.app.fileHandling.IOClient;
+
 import java.util.ArrayList;
 
 /**
@@ -175,15 +178,23 @@ public class TableViewCollection {
         reloadProducts = isProductsReloaded;
     }
 
+    public boolean isReloadProducts() {
+        return reloadProducts;
+    }
+
     public void setModified(boolean isModified) {
         modified = isModified;
+    }
+
+    public boolean isModified() {
+        return modified;
     }
 
     public void setLoadedFile(String loadedFile1) {
         loadedFile = loadedFile1;
     }
 
-    public boolean isModified() {
-        return modified;
+    public String getLoadedFile() {
+        return loadedFile;
     }
 }
